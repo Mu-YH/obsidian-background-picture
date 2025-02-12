@@ -1,0 +1,1074 @@
+/* @settings
+------
+background picture by @Mu-YH
+thanks for creators of obsidian themes blue topaz
+
+-------
+name: background picture
+id: background-picture
+settings:
+  -
+    id: background-settings
+    title: 1.0 Background images
+    title.zh: 1.0 背景设置
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: background-settings-workplace
+    title: 1.0.1 Workplace background image
+    title.zh: 1.0.1 工作页面背景
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: background-settings-workplace-background-image
+    title: Activate image background
+    title.zh: 开启背景
+    type: class-toggle
+    default: false
+    addCommand: true
+  - id: background-settings-workplace-theme-light
+    title: Light mode
+    type: class-select
+    allowEmpty: false
+    default: background-settings-workplace-theme-light-in-the-note
+    options:
+      -
+        label: Custom
+        value: background-settings-workplace-theme-light-custom-option
+ 
+  -
+    id: background-settings-workplace-theme-light-custom
+    title: Custom theme light (url)
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置在线图片。 
+    type: variable-text
+    default: url("https://")
+  -
+    id: background-settings-workplace-theme-dark-custom
+    title: Custom theme dark (url)
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
+    type: variable-text
+    default: url("https://")
+  -
+    id: blur-depth
+    title: Blur radius
+    title.zh: 模糊程度
+    description: To adjust the radius of blur
+    description.zh: 调整背景壁纸模糊程度
+    type: variable-number-slider
+    default: 10
+    format: px
+    min: 0
+    max: 30
+    step: 1
+  -
+    id: brightness-4-bg
+    title: Brightness of image
+    title.zh: 图片亮度
+    description: To adjust the brightness
+    description.zh: 调整背景壁纸亮度
+    type: variable-number-slider
+    default: 0.9
+    min: 0.3
+    max: 1.5
+    step: 0.1
+  -
+    id: saturate-4-bg
+    title: Saturation of image
+    title.zh: 图片饱和度
+    description: To adjust the saturation
+    description.zh: 调整背景壁纸饱和度
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 2
+    step: 0.1
+  -
+    id: background-settings-markdown-page
+    title: 1.0.2 Note page background image
+    title.zh: 1.0.2 笔记背景
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: background-image-settings-switch
+    title: Toggle note background image
+    title.zh: 开启笔记背景
+    type: class-toggle
+    default: false
+    addCommand: true
+  -
+    id: toggle-nonoverlapping-bg
+    title: Activate non-overlapping note background when toggling workplace background
+    title.zh: 笔记背景和工作页面背景不重叠
+    type: class-toggle
+    default: false
+  -
+    id: background-image-settings-markdown-page-options
+    title: Choose image set
+    title.zh: 选择背景
+    type: class-select
+    allowEmpty: false
+    default: background-image-settings-markdown-page-transparent
+    options:
+    -
+        label: Custom
+        value: background-image-settings-markdown-page-custom
+  -
+    id: bg-markdown-page-opacity-cp
+    title: Opacity
+    title.zh: 笔记背景透明度
+    type: variable-number-slider
+    default: 0.25
+    min: 0
+    max: 1
+    step: 0.05
+  -
+    id: custom-markdown-page-background-color
+    title: custom markdown page background color
+    title.zh: 自定义笔记背景颜色
+    description.zh: 当背景色选择为custom时起作用。
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#a39b8f'
+    default-dark: '#000414'
+  -
+    id: background-markdown-page-theme-light-custom
+    title: Custom image (Light mode)
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
+    type: variable-text
+    default: url("https://")
+  -
+    id: background-markdown-page-theme-dark-custom
+    title: Custom image (Dark mode)
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
+    type: variable-text
+    default: url("https://")
+  -
+    id: background-settings-command-palette
+    title: 1.0.3 Images of command palette
+    title.zh: 1.0.3 命令面板背景
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: background-image-settings-command-palette-switch
+    title: Toggle images of command palette
+    title.zh: 开启命令面板背景
+    type: class-toggle
+    default: false
+  -
+    id: background-image-settings-command-palette-same-as-workplace
+    title: Same background as workplace's
+    title.zh: 与工作页面背景保持一致
+    type: class-toggle
+    default: false
+  -
+    id: background-image-settings-command-palette-custom
+    title: Custom background image
+    title.zh: 自定义图片
+    type: class-toggle
+    default: false
+  -
+    id: background-command-palette-theme-light-custom
+    title: Custom theme (light, url)
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
+    type: variable-text
+    default: url("https://")
+  -
+    id: background-command-palette-theme-dark-custom
+    title: Custom theme (dark, url)
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
+    type: variable-text
+    default: url("https://")
+  -
+    id: blur-depth-cp
+    title: Blur radius
+    title.zh: 模糊程度
+    description: To adjust the radius of blur
+    description.zh: 调整背景壁纸模糊程度
+    type: variable-number-slider
+    default: 10
+    format: px
+    min: 0
+    max: 30
+    step: 1
+  -
+    id: brightness-4-bg-cp
+    title: Brightness
+    title.zh: 图片亮度
+    description: To adjust the brightness
+    description.zh: 调整背景壁纸亮度
+    type: variable-number-slider
+    default: 0.9
+    min: 0.3
+    max: 1.5
+    step: 0.1
+  -
+    id: saturate-4-bg-cp
+    title: Saturation
+    title.zh: 图片饱和度
+    description: To adjust the saturation
+    description.zh: 调整背景壁纸饱和度
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 2
+    step: 0.1
+  -
+    id: opacity-cp
+    title: Opacity
+    title.zh: 透明度
+    type: variable-number-slider
+    default: 0.25
+    min: 0
+    max: 1
+    step: 0.05
+  -
+    id: background-settings-markdown-page
+    title: 1.0.4 File explorer background
+    title.zh: 1.0.4 文件栏背景
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: toggle-bg-panel-page
+    title: Toggle background image
+    title.zh: 激活文件栏背景
+    type: class-toggle
+    default: false
+  -
+    id: bg-panel-page-opacity-cp
+    title: Opacity
+    title.zh: 透明度
+    type: variable-number-slider
+    default: 0.25
+    min: 0
+    max: 1
+    step: 0.05
+  -
+    id: bg-panel-page-option
+    title: Image picking (Light mode)
+    title.zh: 图片选择 (Light mode)
+    type: class-select
+    allowEmpty: false
+    default: panel-page-bg-theme-light-wall
+    options:
+      -
+        label: Custom
+        value: panel-page-bg-theme-light-custom
+  -
+    id: background-panel-page-theme-light-custom
+    title: Custom image (Light mode)
+    description: Customise the background image. Use the format in the Default below for an Online image.
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
+    type: variable-text
+    default: url("https://")
+  -
+    id: bg-panel-page-option-dark
+    title: Image picking (Dark mode)
+    title.zh: 图片选择 (Dark mode)
+    type: class-select
+    allowEmpty: false
+    default: panel-page-bg-theme-dark-plant
+    options:
+      -
+        label: Custom
+        value: panel-page-bg-theme-dark-custom
+  -
+    id: background-panel-page-theme-dark-custom
+    title: Custom image (Dark mode)
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
+    type: variable-text
+    default: url("https://")
+  -
+*/
+
+body{
+/*radius*/
+--radius-xs: 3px;
+--radius-s: 5px;
+--radius-m: 7px;
+--radius-l: 15px;
+
+--background-settings-workplace-theme-light-custom: url("https://");
+--background-settings-workplace-theme-dark-custom: url("https://");
+--background-command-palette-theme-light-custom: url("https://");
+--background-command-palette-theme-dark-custom: url("https://");
+--background-panel-page-theme-dark-custom: url("https://");
+--background-panel-page-theme-light-custom: url("https://");
+--background-markdown-page-theme-dark-custom: url("https://");
+--background-markdown-page-theme-light-custom: url("https://");
+--blur-depth: 10px;
+--blur-depth-cp: 10px;
+--saturate-4-bg: 1;
+--saturate-4-bg-cp: 1;
+--brightness-4-bg: 0.9;
+--brightness-4-bg-cp: 0.9;
+--opacity-cp: 0.25;
+--bg-panel-page-opacity-cp:0.25;
+--titlebar-brightness: 1;
+--titlebar-blur-depth: 8px;
+--stack-tabs-background-blur-depth:40px;
+--background-markdown-page-theme-size: 100%
+}
+
+.theme-dark{
+  /*style settings*/
+  --background-secondary-translucent: #2c2c2c26;
+  --background-secondary-translucent-1: #2c2c2c26;
+}
+.theme-light{
+   /*style settings*/
+  --background-secondary-translucent: #ffffff3d;  
+  --background-secondary-translucent-1: #ffffff5d;
+}
+
+
+
+/* ================================== */
+/* ========= Style Settings ========= */
+/* ================================== */
+.style-settings-heading {
+  border-bottom: none !important;
+}
+ 
+.style-settings-heading[data-level="1"] + .style-settings-container
+{
+  padding-left: 1em;
+}
+body:not(.is-mobile) .style-settings-heading[data-level="2"] + .style-settings-container
+{
+  padding-left: 2em;
+}
+body:not(.is-mobile) .style-settings-heading[data-level] + .style-settings-container
+{
+  padding-left: 2em;
+}
+body:not(.is-mobile) .style-settings-heading[data-level="3"] + .style-settings-container
+{
+  padding-left: 3em;
+}
+body:not(.is-mobile) .style-settings-heading[data-level="4"] + .style-settings-container
+{
+  padding-left: 4em;
+}
+body:not(.is-mobile) .style-settings-heading[data-level="5"] + .style-settings-container
+{
+  padding-left: 5em;
+}
+body:not(.is-mobile) .style-settings-heading[data-level="5"] + .style-settings-container
+{
+  padding-left: 5em;
+}
+.setting-item-description,
+.setting-item-info {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.setting-item.setting-item-heading.style-settings-heading[data-level="1"] .setting-item-name {
+  color: var(--h2-color) !important;
+}
+.setting-item.setting-item-heading.style-settings-heading[data-level="2"] .setting-item-name {
+  color: var(--h3-color)!important;
+}
+.setting-item.setting-item-heading.style-settings-heading[data-level="3"] .setting-item-name {
+  color: var(--h4-color) !important;
+}
+.setting-item.setting-item-heading.style-settings-heading[data-level="4"] .setting-item-name {
+  color: var(--h5-color) !important;
+}
+.style-settings-collapse-indicator {
+  color: var(--theme-color) !important;
+}
+
+.setting-item.setting-item-heading.style-settings-heading.is-collapsed .style-settings-collapse-indicator {
+  opacity: 0.4;
+}
+
+.style-settings-container {
+  padding-bottom: 5px !important;
+}
+
+.style-settings-container .setting-item-control select {
+  max-width: 330px;
+}
+
+.workspace-leaf-content .style-settings-container .setting-item:first-child {
+  margin-top: 20px;
+}
+
+div.style-settings-heading[data-level="0"] {
+  position: relative;
+  padding: 8px;
+  margin-bottom: 0;
+  background-color: var(--background-primary);
+  border-radius: var(--radius-l);
+  box-shadow: 0 3px 5px var(--background-modifier-box-shadow);
+}
+
+.is-mobile div.style-settings-heading[data-level="0"] {
+  padding: 4px;
+}
+
+div.style-settings-heading[data-level="0"] + .style-settings-container {
+  padding: 20px 30px;
+  margin-top: -10px;
+  margin-bottom: 0;
+  margin-left: 0;
+  border: 0px;
+  border-radius: var(--radius-l);
+}
+
+div.style-settings-heading[data-level="0"] + .style-settings-container .style-settings-collapse-indicator {
+  margin-left: 0;
+}
+
+
+div.style-settings-heading[data-level="0"].is-collapsed {
+  margin-bottom: 15px;
+  border-radius: var(--radius-l);
+  box-shadow: 0 3px 5px var( --background-modifier-box-shadow);
+}
+
+div.style-settings-heading[data-level="0"].is-collapsed {
+  background-color: var(--background-primary-alt);
+}
+
+
+div.style-settings-heading[data-level="1"] .setting-item-description {
+  padding-left: 2em;
+}
+
+div.style-settings-heading:not([data-level="0"]):not([data-level="1"]) .setting-item-description {
+  padding-left: 2em;
+}
+
+div.style-settings-heading {
+  padding: 8px 0;
+  margin-bottom: 5px;
+}
+
+div.style-settings-container[data-level="0"] {
+  margin-left: 4px;
+}
+
+div.style-settings-container[data-level] {
+  padding-bottom: 0;
+  margin-left: 0.5em;
+}
+
+.setting-item.setting-item-heading.style-settings-heading .setting-item-name {
+  width: fit-content;
+  padding: 0 8px;
+  border-radius: var(--radius-l);
+}
+
+.setting-item.setting-item-heading.style-settings-heading:hover .style-settings-collapse-indicator {
+  color: var(--text-accent-hover)!important;
+}
+
+.setting-item.setting-item-heading.style-settings-heading:hover .setting-item-name {
+  color: var(--text-accent-hover)!important;
+}
+
+div.workspace-leaf-content[data-type="style-settings"] .view-content .style-settings-container div.setting-item:not(.setting-item-heading) {
+  flex-flow: wrap;
+}
+
+div.workspace-leaf-content[data-type="style-settings"] .setting-item-description {
+  font-size:12px;
+}
+
+div.workspace-leaf-content[data-type="style-settings"]  div.setting-item,
+div.workspace-leaf-content[data-type="style-settings"]  div.style-settings-heading {
+  border-bottom: unset;
+  border-top: 1px inset #ffffff24;
+}
+
+
+/*
+.theme-light div.setting-item {
+  border-bottom: 1px dotted #e1e1e199;
+  border-top: 1.5px solid  #cfcfcf42;
+
+}
+
+
+.theme-dark div.setting-item {
+  border-bottom: 1px solid var(--background-modifier-border);
+  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 45%),
+                        inset 0 -2px 0 rgb(0 0 0 / 10%)
+}
+*/
+
+
+div.workspace-leaf-content[data-type="style-settings"] div.style-settings-heading[data-id="topaz-community"] {
+  margin-top: 10px;
+  margin-bottom: 0;
+  pointer-events: none;
+  cursor: text;
+  border-top: 2px solid var(--background-modifier-border);
+  pointer-events: none;
+}
+
+.style-settings-heading[data-id="topaz-community"] .setting-item-control,
+.style-settings-heading[data-id="topaz-community"] .style-settings-collapse-indicator {
+  display: none;
+}
+
+.style-settings-heading[data-id="topaz-community"] .setting-item-name::before {
+  display: inline-block;
+  width: 20px;
+  height: fit-content;
+  padding-right: 8px;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+  font-weight: initial;
+  color: unset;
+  content: "❤️";
+}
+
+.setting-item.style-settings-heading[data-id="topaz-github"] {
+  cursor: default;
+}
+
+.setting-item.style-settings-heading[data-id="topaz-github"]:hover div.setting-item-name {
+  color: var(--text-normal);
+}
+
+.setting-item.style-settings-heading[data-id="topaz-github"] .setting-item-name::before {
+  display: inline-block;
+  width: 20px;
+  height: fit-content;
+  padding-right: 8px;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+  font-weight: initial;
+  color: unset;
+  content: "⭐";
+}
+
+.setting-item.style-settings-heading[data-id="topaz-github"] .setting-item-description {
+  color: var(--interactive-accent);
+  cursor: text;
+  user-select: all;
+}
+
+.setting-item.style-settings-heading[data-id="topaz-example-github"] {
+  cursor: default;
+}
+
+.setting-item.style-settings-heading[data-id="topaz-example-github"]:hover div.setting-item-name {
+  color: var(--text-normal);
+}
+
+.setting-item.style-settings-heading[data-id="topaz-example-github"] .setting-item-name::before {
+  display: inline-block;
+  width: 20px;
+  height: fit-content;
+  padding-right: 8px;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+  font-weight: initial;
+  color: unset;
+  content: "⚠️";
+}
+
+.setting-item.style-settings-heading[data-id="topaz-example-github"] .setting-item-description {
+  color: var(--interactive-accent);
+  cursor: text;
+  user-select: all;
+}
+
+.style-settings-container .setting-item:is([data-id*="interactive-accent"], [data-id*="text-accent"]) .setting-item-control::before {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 8px;
+  content: " ";
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-l);
+}
+
+
+.style-settings-container .setting-item:is([data-id^="interactive-accent"]) .setting-item-control::before {
+  background-color: var(--interactive-accent);
+}
+.style-settings-container .setting-item:is([data-id^="text-accent"]) .setting-item-control::before {
+  background-color: var(--text-accent);
+}
+/**style setting logic  ******/
+
+
+body:not(.color-scheme-options-lillimon-topaz) .setting-item[data-id="color-magic"],
+body:not(.background-settings-workplace-background-image) .setting-item[data-id="background-settings-workplace-background-image"] ~ * {
+  display: none;
+}
+body:not(.background-image-settings-switch) .setting-item[data-id="bg-markdown-page-opacity-cp"],
+body:not(.background-image-settings-switch) .setting-item[data-id="toggle-nonoverlapping-bg"],
+body:not(.background-image-settings-switch) .setting-item[data-id="background-image-settings-markdown-page-options"],
+body:not(.background-image-settings-switch) .setting-item[data-id="background-image-settings-markdown-page-random"],
+body:not(.background-image-settings-switch) .setting-item[data-id="background-image-settings-markdown-page-random-options"] {
+  display: none;
+}
+
+body:not(.background-notebook-liked-switch) .setting-item[data-id="background-notebook-liked-switch"] ~ * {
+  display: none;
+}
+
+body:not([class*="background-settings-workplace-wave"]) .setting-item[data-id="background-waves-color"],
+body:not(.background-settings-workplace-theme-light-custom-option) .setting-item[data-id="background-settings-workplace-theme-light-custom"],
+body:not(.background-settings-workplace-theme-dark-custom-option) .setting-item[data-id="background-settings-workplace-theme-dark-custom"],
+body:not(.background-settings-workplace-random-dark) .setting-item[data-id="background-settings-workplace-random"],
+body:not(.background-settings-workplace-random-light) .setting-item[data-id="background-settings-workplace-random"],
+body:not(.custom-thino-background) .setting-item[data-id="thino-background-dark-custom"],
+body:not(.custom-thino-background) .setting-item[data-id="thino-background-light-custom"],
+body:not(.custom-thino-share-background) .setting-item[data-id="share-thino-background-dark-custom"],
+body:not(.custom-thino-share-background) .setting-item[data-id="share-thino-background-light-custom"],
+body:not(.thino-background-color) .setting-item[data-id="thino-modern-primary"]
+ {
+  display: none;
+}
+body:not(:is(.share-thino-with-workspace-background,.share-thino-with-thino-background,.custom-thino-share-background)) .setting-item[data-id="blur-thino-share-frosted-glass"]
+{
+  display: none;
+}
+
+.setting-item:is([data-id="background-image-settings-switch"],[data-id="background-notebook-liked-switch"],[data-id="background-settings-workplace-background-image"],[data-id="background-image-settings-command-palette-switch"]) .setting-item-name {
+  font-weight: bold;
+}
+body:not(.background-image-settings-markdown-page-custom) .setting-item[data-id="custom-markdown-page-background-color"],
+body:not(.background-image-settings-markdown-page-custom) .setting-item[data-id="background-markdown-page-theme-light-custom"],
+body:not(.background-image-settings-markdown-page-custom) .setting-item[data-id="background-markdown-page-theme-dark-custom"]  {
+  display: none;
+}
+
+
+body:not(.background-image-settings-markdown-page-random) .setting-item[data-id="background-image-settings-markdown-page-random-options"] {
+  display: none;
+}
+.setting-item[data-id="notebook-liked-background-settings"] + .style-settings-container .setting-item:not(:first-child) {
+  /* display: none; */
+}
+body:is(.notebook-liked-markdown-page-grid-notebook-1,.notebook-liked-markdown-page-grid-notebook-2,
+.notebook-liked-markdown-page-dotted-notebook-1,.notebook-liked-markdown-page-dotted-notebook-2) .setting-item[data-id="bg-color-notebook"],
+body.notebook-liked-markdown-page-grid-notebook-1 .setting-item[data-id="grid-notebook-line-color-1"],
+body.notebook-liked-markdown-page-grid-notebook-2 .setting-item[data-id="grid-notebook-line-color-2"],
+body:is(.notebook-liked-markdown-page-dotted-notebook-1,.notebook-liked-markdown-page-dotted-notebook-2) .setting-item[data-id="dotted-notebook-dot-color"] {
+  display: block !important;
+}
+body:not(.background-image-settings-command-palette-switch) .setting-item[data-id="background-image-settings-command-palette-switch"] ~ *,
+body:not(.background-image-settings-command-palette-custom) .setting-item[data-id="background-command-palette-theme-light-custom"],
+body:not(.background-image-settings-command-palette-custom) .setting-item[data-id="background-command-palette-theme-dark-custom"] {
+  display: none;
+}
+
+body.background-image-settings-command-palette-same-as-workplace .setting-item[data-id="background-image-settings-command-palette-custom"] {
+  display: none;
+}
+body:not(.toggle-bg-panel-page) .setting-item[data-id="toggle-bg-panel-page"] ~ *,
+body:not(.panel-page-bg-theme-light-custom) .setting-item[data-id="background-panel-page-theme-light-custom"],
+body:not(.panel-page-bg-theme-dark-custom) .setting-item[data-id="background-panel-page-theme-dark-custom"] {
+  display: none;
+}
+
+body:not(.fancy-hr-icon) .setting-item[data-id="fancy-hr-folder-icon"],
+body:not(.fancy-hr-no-icon) .setting-item[data-id="fancy-hr-folder-no-icon"],
+body:not(.fancy-hr-number) .setting-item[data-id="fancy-hr-folder-with-number"] {
+  display: none;
+}
+
+body:not(.bt-default-unordered-list) .setting-item[data-id="options-bt-default"],
+body:not(.custom-unordered-list) .setting-item[data-id="options-for-custom"] {
+  display: none;
+}
+
+body:not(.custom-ordered-list) .setting-item[data-id^="list-ol-marker-"] {
+  display: none;
+}
+body.folder-style-change-options-colorful-default .setting-item[data-id="folder-style-change-options-colorful-subfolder"] {
+  display: none;
+}
+
+body:not(.folder-colorful-custom) .setting-item[data-id="folder-colorful-custom-color"] {
+  display: none;
+}
+
+body:not(.loading-custom-text) .setting-item[data-id="loading-custom-text-folder"],
+body:not(.loading-animation-custom) .setting-item[data-id="loading-animation-custom-folder"] {
+  display: none;
+}
+
+body:not(.colorful-tag-bt) .setting-item[data-id="customised-colorful-tag"],
+body:not(.tag-pill-outlined) .setting-item[data-id="outlined-style"] {
+  display: none;
+}
+
+
+body.is-hidden-frameless .setting-item:is([data-id="simple-titlebar"],[data-id="custom-titlebar-bg"],[data-id="titlebar-blur-depth"],[data-id="titlebar-brightness"],[data-id="hide-titlebar-text"]) {
+  display: none;
+}
+
+body:not(.is-hidden-frameless) .setting-item:is([data-id="hide-titlebar-close-btn"]) {
+  display: none;
+}
+
+body:not(.color-scheme-options-simplicity-topaz) .setting-item:is([data-id="disable-auto-hide-header"]) {
+  display: none;
+}
+
+body:not(.bt-colorful-titlebar) .setting-item[data-id="background-titlebar-inner"]  {
+  display: none;
+}
+
+body:not(.folder-icons) .setting-item[data-id="remove-first-folder-icon"]  {
+  display: none;
+}
+
+/* font color */
+/* body.background-settings-workplace-background-image :is(.tree-item-inner,.tree-item-flair,.workspace-ribbon-collapse-btn,.side-dock-ribbon-tab,.side-dock-ribbon-action):not(:hover) {
+  color: var(--text-normal);
+} */
+
+body.background-settings-workplace-background-image .workspace-tab-header-container
+{
+  border:none;
+}
+body.background-settings-workplace-background-image.theme-dark {
+  --background-primary-bg-4-bt: #1414148a;
+  --background-secondary-bg-4-bt: #16161680;
+  --background-secondary-alt-bg-4-bt: #16161680;
+  --background-primary-alt-bg-4-bt: #1c1c1ccf;
+  --text-normal: #cccccc;
+  --page-border-bottom: var(--color-base-30);
+  --tab-background-active: transparent;
+  --tab-outline-width: transparent;
+}
+
+body.background-settings-workplace-background-image .nav-folder.mod-root>.nav-folder-title {
+  background-color: transparent !important;
+}
+
+body.background-settings-workplace-background-image.theme-dark.is-mobile  {
+  --background-primary-bg-4-bt: #1f1f1fbf;
+  --background-secondary-bg-4-bt: #00000069;
+  --background-secondary-alt-bg-4-bt: #16161680;
+  --background-primary-alt-bg-4-bt: #00000082;
+  --text-normal: #d4d4d4;
+  --page-border-bottom: var(--color-base-30);
+}
+
+body.is-mobile.background-settings-workplace-background-image:is(.background-settings-workplace-waves-light,.background-settings-workplace-waves2-light).theme-light,
+body.is-mobile.background-settings-workplace-background-image:is(.background-settings-workplace-waves,.background-settings-workplace-waves2).theme-dark {
+  --wave2-background-color: #001ae0;
+  --wave-background-color: #245eff;
+}
+
+body.background-image-settings-command-palette-switch .modal-container .prompt::before {
+  background-size: cover;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index:-1;
+}
+
+body.background-image-settings-command-palette-same-as-workplace.background-image-settings-command-palette-switch .modal-container .prompt::before {
+  background-image: var(--theme-background);
+  filter: blur(var(--blur-depth-cp)) brightness(var(--brightness-4-bg-cp)) saturate(var(--saturate-4-bg-cp));
+  opacity: var(--opacity-cp);
+  z-index: -1;
+}
+body.background-image-settings-command-palette-same-as-workplace.background-image-settings-command-palette-switch.background-settings-workplace-waves2-light .modal-container .prompt::before,
+body.background-image-settings-command-palette-same-as-workplace.background-image-settings-command-palette-switch.background-settings-workplace-waves2 .modal-container .prompt::before {
+  top: 60%;
+}
+
+body.theme-light.background-image-settings-command-palette-same-as-workplace.background-image-settings-command-palette-switch.background-settings-workplace-waves-light .modal-container .prompt::before,
+body.background-image-settings-command-palette-same-as-workplace.background-image-settings-command-palette-switch.background-settings-workplace-background-image.background-settings-workplace-waves.theme-dark .prompt:before {
+  transform: rotate(180deg);
+  top: 75%;
+  background-image:unset;
+  -webkit-mask-image: var(--theme-background);
+  background-size:100% 100%;
+  opacity:0.5;
+  background-color: var(--wave-background-color);
+}
+
+body.background-image-settings-command-palette-same-as-workplace.background-image-settings-command-palette-switch .modal-container .prompt input.prompt-input,
+body.background-image-settings-command-palette-switch:not(.background-image-settings-command-palette-same-as-workplace) .modal-container .prompt input.prompt-input {
+  background-color: transparent;
+}
+
+body.background-image-settings-command-palette-custom.background-image-settings-command-palette-switch:not(.background-image-settings-command-palette-same-as-workplace).theme-light .modal-container .prompt::before {
+  background-image: var(--background-command-palette-theme-light-custom);
+}
+
+body.background-image-settings-command-palette-custom.background-image-settings-command-palette-switch:not(.background-image-settings-command-palette-same-as-workplace).theme-dark .modal-container .prompt::before {
+  background-image: var(--background-command-palette-theme-dark-custom);
+}
+body.background-image-settings-command-palette-custom.background-image-settings-command-palette-switch .modal-container .prompt::before {
+  background-size: auto;
+  filter: blur(var(--blur-depth-cp)) brightness(var(--brightness-4-bg-cp)) saturate(var(--saturate-4-bg-cp));
+  opacity: var(--opacity-cp);
+  z-index: -1;
+}
+body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
+body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
+body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header.is-before-active .workspace-tab-header-inner,
+body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header.is-after-active .workspace-tab-header-inner,
+body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-container-before.is-before-active,
+body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-container-after.is-after-active,
+body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header.is-before-active,
+body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header.is-after-active {
+  background-color: transparent;
+}
+
+body.background-settings-workplace-background-image.background-settings-workplace-theme-light-custom-option.theme-light {
+  --theme-background: var(--background-settings-workplace-theme-light-custom);
+}
+
+body.background-settings-workplace-background-image.background-settings-workplace-theme-dark-custom-option.theme-dark {
+  --theme-background: var(--background-settings-workplace-theme-dark-custom);
+}
+
+
+ /* Sea and sky for Blue Topaz */
+.workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.12;
+  background-size: 100% 100%;
+}
+
+body.background-notebook-liked-switch .markdown-embed :is(.markdown-preview-view, .markdown-rendered),
+body.background-notebook-liked-switch .cm-s-obsidian .cm-embed-block {
+  background: inherit !important;
+}
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 .markdown-preview-view.markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 .cm-s-obsidian .cm-scroller {
+  background: var(--bg-color-notebook);
+  background-image: linear-gradient(90deg, var(--grid-notebook-line-color-1) 3%, transparent 0), linear-gradient(var(--grid-notebook-line-color-1) 3%, transparent 0);
+  background-size: 20px 20px;
+}
+
+body:not(.toggle-fixed-pattern).background-notebook-liked-switch .markdown-preview-view.markdown-rendered,
+body:not(.toggle-fixed-pattern).background-notebook-liked-switch .cm-s-obsidian .cm-scroller {
+  background-attachment: local !important;
+}
+
+body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-1 .markdown-preview-view.markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-1 .cm-s-obsidian .cm-scroller {
+  background: var(--bg-color-notebook);
+  background-image: radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0);
+  background-size: 22px 22px;
+  background-position: 8px 8px;
+}
+
+body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-2 .markdown-preview-view.markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-2 .cm-s-obsidian .cm-scroller {
+  background: var(--bg-color-notebook);
+  background-image: radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0),
+    radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+/*https://www.jianshu.com/p/2b713844cfe9*/
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-2 .markdown-preview-view.markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-2 .cm-s-obsidian .cm-scroller {
+  background: var(--bg-color-notebook);
+  background-image:
+    linear-gradient(var(--grid-notebook-line-color-2) 1px, transparent 0),
+    linear-gradient(90deg, var(--grid-notebook-line-color-2) 1px,transparent 0),
+    linear-gradient(var(--grid-notebook-line-color-1) 1px,
+    transparent 0),
+    linear-gradient(90deg,var(--grid-notebook-line-color-1) 1px,
+    transparent 0);
+  background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;
+}
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1 .markdown-preview-view.markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1 .cm-s-obsidian .cm-scroller {
+  background: var(--stripe-notebook-stripe-color);
+  background-image: repeating-linear-gradient(135deg,
+  hsla(0,0%,100%,.03), hsla(0,0%,100%,.03) 13px, transparent 0, transparent 30px);
+}
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1.theme-light .markdown-preview-view.markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1.theme-light .cm-s-obsidian .cm-scroller {
+  background: var(--stripe-notebook-stripe-color);
+  background-image: repeating-linear-gradient(135deg,
+  hsla(0,0%,100%,.3), hsla(0,0%,100%,.3) 13px, transparent 0, transparent 30px);
+}
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2 .markdown-preview-view.markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2 .cm-s-obsidian .cm-scroller {
+  background: var(--stripe-notebook-stripe-color);
+  background-image:repeating-linear-gradient(45deg,
+  hsla(0,0%,100%,.025), hsla(0,0%,100%,.025) 20px, transparent 0, transparent 60px), repeating-linear-gradient(-45deg, hsla(0,0%,100%,.025), hsla(0,0%,100%,.025) 20px, transparent 0, transparent 60px);
+}
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2.theme-light .markdown-preview-view.markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2.theme-light .cm-s-obsidian .cm-scroller {
+  background: var(--stripe-notebook-stripe-color);
+  background-image:repeating-linear-gradient(45deg,
+  hsla(0,0%,100%,.3), hsla(0,0%,100%,.3) 20px, transparent 0, transparent 60px), repeating-linear-gradient(-45deg, hsla(0,0%,100%,.3), hsla(0,0%,100%,.3) 20px, transparent 0, transparent 60px);
+}
+
+.workspace-leaf-content .floating-toc-div+.markdown-source-view .cm-editor {
+  padding-left: 0;
+}
+
+body.toggle-split-note-background .workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split) .workspace-leaf-content .markdown-rendered,
+body.toggle-split-note-background .workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split) .workspace-tab-container .workspace-leaf-content .cm-scroller,
+body.toggle-split-note-background .workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split) .workspace-tab-container .workspace-leaf-content .markdown-reading-view {
+  background: initial;
+}
+
+body.background-image-settings-switch .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: var(--bg-markdown-page-opacity-cp,0.25);
+  background-size: cover;
+}
+
+
+body.background-image-settings-switch.background-image-settings-markdown-page-transparent .workspace-split.mod-root {
+  --background-primary: transparent;
+  --tab-outline-color:transparent;
+}
+
+body.background-image-settings-switch.background-image-settings-markdown-page-transparent.theme-dark .workspace-split.mod-root .workspace-tab-header.is-active {
+  background-color: transparent;
+}
+body.background-image-settings-switch.background-image-settings-markdown-page-transparent .mod-root .workspace-tabs .workspace-leaf {
+  background-color: unset;
+}
+
+
+body.background-image-settings-switch.background-image-settings-markdown-page-size .workspace-split.mod-root {
+  --background-primary: transparent;
+  --tab-outline-color:transparent;
+}
+
+body.background-image-settings-switch.background-image-settings-markdown-page-size.theme-dark .workspace-split.mod-root .workspace-tab-header.is-active {
+  background-color: transparent;
+}
+body.background-image-settings-switch.background-image-settings-markdown-page-size .mod-root .workspace-tabs .workspace-leaf {
+  background-color: unset;
+}
+
+/*侧边背景*/
+body.toggle-bg-panel-page :is(.nav-files-container,.file-tree-plugin-view)::before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: no-repeat center/cover var(--panel-page-background-url-theme);
+  z-index: -1;
+}
+
+body.toggle-bg-panel-page.theme-dark :is(.nav-files-container,.file-tree-plugin-view)::before {
+  opacity: var(--bg-panel-page-opacity-cp);
+}
+
+body.toggle-bg-panel-page.theme-light :is(.nav-files-container,.file-tree-plugin-view)::before {
+  opacity: var(--bg-panel-page-opacity-cp);
+}
+
+
+body.toggle-bg-panel-page.panel-page-bg-theme-dark-plant.theme-dark {
+  --panel-page-background-url-theme: url("data:image/avif;base64,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");
+}
+body.toggle-bg-panel-page.panel-page-bg-theme-dark-custom.theme-dark {
+  --panel-page-background-url-theme: var(--background-panel-page-theme-dark-custom);
+}
+
+body.toggle-bg-panel-page.panel-page-bg-theme-light-wall.theme-light {
+  --panel-page-background-url-theme: url("data:image/avif;base64,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");
+}
+body.toggle-bg-panel-page.panel-page-bg-theme-light-custom.theme-light {
+  --panel-page-background-url-theme: var(--background-panel-page-theme-light-custom);
+}
+
+
+
+/*新功能*/
+body.background-image-settings-switch.background-image-settings-markdown-page-custom.theme-dark .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="markdown"]::before {
+  background-image: var(--background-markdown-page-theme-dark-custom);
+}
+
+body.background-image-settings-switch.background-image-settings-markdown-page-custom.theme-light .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="markdown"]::before {
+  background-image: var(--background-markdown-page-theme-light-custom);
+}
+body.background-image-settings-switch.background-image-settings-markdown-page-custom .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="markdown"]::before {
+background-size:unset;
+background-color: var(--custom-markdown-page-background-color);
+opacity: var(--bg-markdown-page-opacity-cp,1);
+}
+
+body.background-image-settings-switch.background-image-settings-markdown-page-custom .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="markdown"]::before {
+  background-image: var(--background-markdown-page-theme-dark-custom);
+  background-size: var(--bg-image-size, 100%); /* 可通过变量调整大小 */
+  background-position: var(--bg-image-position, center); /* 可通过变量调整位置 */
+  background-repeat: no-repeat; /* 防止重复 */
+  opacity: var(--bg-markdown-page-opacity-cp, 1); /* 可调透明度 */
+}
+body.background-image-settings-switch.background-image-settings-markdown-page-custom .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="markdown"]::before {
+  background-image: var(--background-markdown-page-theme-light-custom);
+  background-size: var(--bg-image-size, 100%); /* 可通过变量调整大小 */
+  background-position: var(--bg-image-position, center); /* 可通过变量调整位置 */
+  background-repeat: no-repeat; /* 防止重复 */
+  opacity: var(--bg-markdown-page-opacity-cp, 1); /* 可调透明度 */
+}
+body.background-image-settings-switch.background-image-settings-markdown-page-custom .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="markdown"]::before {
+  background-size: var(--bg-markdown-page-size, cover); /* 默认大小为 cover，可自定义 */
+  background-position: var(--bg-markdown-page-position, center); /* 默认居中，可调整 */
+  background-color: var(--custom-markdown-page-background-color);
+  opacity: var(--bg-markdown-page-opacity-cp, 1);
+}
+
+
+body:not(.is-mobile).theme-dark.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-split.mod-root
+{
+  background-color: var(--simple-tran);
+}
+
+body:not(.is-mobile).background-image-settings-switch.background-image-settings-markdown-page-transparent.background-settings-workplace-background-image.color-scheme-options-simplicity-topaz .workspace-split.mod-root
+{
+  background-color: var(--simple-tran);
+}
+body.color-scheme-options-simplicity-topaz .workspace-split.mod-root
+{
+  background-color: var(--simple-white-2);
+}
+body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-tabs .workspace-tab-header-container {
+  background-color: transparent;
+}
+
+body.is-mobile.color-scheme-options-simplicity-topaz .workspace-tabs .workspace-tab-header-container {
+  background-color: var(--background-secondary);
+}
+
+body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .mod-root .workspace-tabs:not(.mod-top) .workspace-tab-header-container-inner {
+  padding-bottom:1px;
+}
